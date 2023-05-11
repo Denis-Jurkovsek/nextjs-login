@@ -1,7 +1,7 @@
 import { Button, Card, Text } from '@nextui-org/react'
 import React from 'react'
+import { BsPeopleFill } from 'react-icons/all'
 
-import { Community } from '../icons/community'
 import { Flex } from '../styles/flex'
 
 export const CardBalance3 = () => {
@@ -16,7 +16,7 @@ export const CardBalance3 = () => {
     >
       <Card.Body css={{ py: '$10' }}>
         <Flex css={{ gap: '$5' }}>
-          <Community />
+          <BsPeopleFill size={20} color={'gray'} />
           <Flex direction={'column'}>
             <Text span css={{ color: '$warning' }}>
               Doppelverwendungen
@@ -24,13 +24,14 @@ export const CardBalance3 = () => {
           </Flex>
         </Flex>
         <Flex css={{ gap: '$6', py: '$4' }} align={'center'}>
-          <Text span size={'$xl'} css={{ color: 'white' }} weight={'semibold'}>
-            6
-          </Text>
-          <Text span css={{ color: '' }} size={'$xs'}>
+          <Button size={'sm'} color={'success'}>
+            <Text size={'$xs'} weight={'bold'}>
+              6 Prüfen
+            </Text>
+          </Button>
+          <Text span css={{ color: '$green600' }} size={'$xs'}>
             + 4.5%
           </Text>
-          <Button size={'xs'}>Prüfen</Button>
         </Flex>
       </Card.Body>
     </Card>

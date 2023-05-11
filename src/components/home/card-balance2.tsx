@@ -1,7 +1,7 @@
 import { Card, Text } from '@nextui-org/react'
 import React from 'react'
+import { BsArrowUpCircleFill } from 'react-icons/all'
 
-import { Community } from '../icons/community'
 import { Flex } from '../styles/flex'
 
 export const CardBalance2 = () => {
@@ -16,9 +16,9 @@ export const CardBalance2 = () => {
     >
       <Card.Body css={{ py: '$10' }}>
         <Flex css={{ gap: '$5' }}>
-          <Community color={'$accents9'} />
+          <BsArrowUpCircleFill size={20} color={'gray'} />
           <Flex direction={'column'}>
-            <Text span css={{ color: '$error' }}>
+            <Text span css={{ color: '$red600' }}>
               Austritte
             </Text>
           </Flex>
@@ -27,8 +27,8 @@ export const CardBalance2 = () => {
           <Text span size={'$xl'} weight={'semibold'}>
             481
           </Text>
-          <Text span css={{ color: '' }} size={'$xs'}>
-            + 4.5%
+          <Text span css={{ color: '$red600' }} size={'$xs'}>
+            - 4.5%
           </Text>
         </Flex>
       </Card.Body>
