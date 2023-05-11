@@ -1,6 +1,7 @@
-import { Text, Link } from '@nextui-org/react'
+import { Link, Text } from '@nextui-org/react'
 import NextLink from 'next/link'
 import React from 'react'
+
 import { useSidebarContext } from '../layout/layout-context'
 import { Flex } from '../styles/flex'
 

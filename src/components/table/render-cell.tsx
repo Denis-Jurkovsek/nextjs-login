@@ -1,9 +1,10 @@
-import { Col, Row, User, Text, Tooltip } from '@nextui-org/react'
+import { Col, Row, Text, Tooltip, User } from '@nextui-org/react'
 import React from 'react'
+
 import { DeleteIcon } from '../icons/table/delete-icon'
 import { EditIcon } from '../icons/table/edit-icon'
 import { EyeIcon } from '../icons/table/eye-icon'
-import { users } from './data'
+import type { users } from './data'
 import { IconButton, StyledBadge } from './table.styled'
 
 interface Props {

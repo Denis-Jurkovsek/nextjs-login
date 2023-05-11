@@ -1,9 +1,11 @@
 import React from 'react'
-import { Box } from '../styles/box'
-import Chart, { Props } from 'react-apexcharts'
+import type { Props } from 'react-apexcharts'
+import Chart from 'react-apexcharts'
+
 import { CardBalance1 } from '../home/card-balance1'
 import { CardBalance2 } from '../home/card-balance2'
 import { CardBalance3 } from '../home/card-balance3'
+import { Box } from '../styles/box'
 import { Flex } from '../styles/flex'
 
 const state: Props['series'] = [

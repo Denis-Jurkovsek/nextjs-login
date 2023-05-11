@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Accounts } from '../components/accounts'
 
 const accounts = () => {

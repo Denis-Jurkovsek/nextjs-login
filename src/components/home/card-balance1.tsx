@@ -1,7 +1,7 @@
-import { Button, Card, Text } from '@nextui-org/react'
+import { Card, Text } from '@nextui-org/react'
 import React from 'react'
+
 import { Community } from '../icons/community'
-import { Box } from '../styles/box'
 import { Flex } from '../styles/flex'
 
 export const CardBalance1 = () => {
@@ -19,7 +19,7 @@ export const CardBalance1 = () => {
           <Community />
           <Flex direction={'column'}>
             <Text span css={{ color: '$success' }}>
-              Eintrittt
+              Eintritt
             </Text>
           </Flex>
         </Flex>
