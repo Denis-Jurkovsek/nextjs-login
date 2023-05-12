@@ -16,11 +16,7 @@ export const CardTransactions = () => {
       }}
     >
       <Card.Body css={{ py: '$10' }}>
-        <Flex css={{ gap: '$5' }} justify={'center'}>
-          <Text h3 css={{ textAlign: 'center' }}>
-            Letze Benutzung
-          </Text>
-        </Flex>
+        <Flex css={{ gap: '$5' }} justify={'center'}></Flex>
         <Flex css={{ gap: '$6', py: '$4' }} direction={'column'}>
           <Flex css={{ gap: '$6' }} align={'center'} justify='between'>
             <Text span size={'$base'} weight={'semibold'}>

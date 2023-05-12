@@ -6,6 +6,7 @@ import React from 'react'
 import { Box } from '../styles/box'
 import { Flex } from '../styles/flex'
 import { TableWrapper } from '../table/table'
+import { CardAgents } from './card-agents'
 import { CardTransactions } from './card-transactions'
 
 const Chart = dynamic(() => import('../charts/steam').then(mod => mod.Steam), {
@@ -33,13 +34,24 @@ export const Content = () => (
         css={{
           px: '$12',
           mt: '$8',
-          '@xsMax': { px: '$10' },
-          gap: '$12'
+          '@xsMax': { px: '$10', width: '105%' },
+          '@lg': { width: '70%' }
         }}
         direction={'column'}
       >
         {/* Card Section Top */}
         <Box>
+          <Text
+            h3
+            css={{
+              textAlign: 'center',
+              '@sm': {
+                textAlign: 'inherit'
+              }
+            }}
+          >
+            Übersicht
+          </Text>
           <Flex
             css={{
               gap: '$10',
@@ -55,17 +67,6 @@ export const Content = () => (
 
         {/* Chart */}
         <Box>
-          <Text
-            h3
-            css={{
-              textAlign: 'center',
-              '@lg': {
-                textAlign: 'inherit'
-              }
-            }}
-          >
-            Statistik
-          </Text>
           <Box
             css={{
               width: '100%',
@@ -101,7 +102,7 @@ export const Content = () => (
             }
           }}
         >
-          Aktivität
+          Letzen Benutzungen
         </Text>
         <Flex
           direction={'column'}
@@ -120,6 +121,7 @@ export const Content = () => (
           }}
         >
           <CardTransactions />
+          <CardAgents />
         </Flex>
       </Box>
     </Flex>

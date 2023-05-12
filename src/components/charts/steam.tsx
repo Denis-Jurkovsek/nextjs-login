@@ -115,6 +115,9 @@ export const Steam = () => {
               },
               '@smMax': {
                 flexDirection: 'column'
+              },
+              '@mdMax': {
+                flexDirection: 'column'
               }
             }}
           >

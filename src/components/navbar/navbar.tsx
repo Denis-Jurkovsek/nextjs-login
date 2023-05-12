@@ -1,21 +1,17 @@
-import { Input, Link, Navbar, Text } from '@nextui-org/react'
+import { Input, Link, Navbar } from '@nextui-org/react'
 import React from 'react'
 
-import { FeedbackIcon } from '../icons/navbar/feedback-icon'
-import { GithubIcon } from '../icons/navbar/github-icon'
-import { SupportIcon } from '../icons/navbar/support-icon'
 import { SearchIcon } from '../icons/searchicon'
 import { Box } from '../styles/box'
-import { Flex } from '../styles/flex'
 import { BurguerButton } from './burguer-button'
 import { NotificationsDropdown } from './notifications-dropdown'
 import { UserDropdown } from './user-dropdown'
 
-interface Props {
+interface INavbarWrapperProps {
   children: React.ReactNode
 }
 
-export const NavbarWrapper = ({ children }: Props) => {
+export const NavbarWrapper = ({ children }: INavbarWrapperProps) => {
   const collapseItems = [
     'Profile',
     'Dashboard',
@@ -64,9 +60,11 @@ export const NavbarWrapper = ({ children }: Props) => {
           <BurguerButton />
         </Navbar.Content>
         <Navbar.Content
-          hideIn={'md'}
           css={{
-            width: '100%'
+            width: '100%',
+            '@xsMax': {
+              pl: '25px'
+            }
           }}
         >
           <Input
@@ -78,7 +76,6 @@ export const NavbarWrapper = ({ children }: Props) => {
               transition: 'all 0.2s ease',
               '@xsMax': {
                 w: '100%'
-                // mw: '300px',
               },
               '& .nextui-input-content--left': {
                 h: '100%',
@@ -86,29 +83,14 @@ export const NavbarWrapper = ({ children }: Props) => {
                 dflex: 'center'
               }
             }}
-            placeholder='Search...'
+            placeholder='Barcode eingeben..'
           />
         </Navbar.Content>
         <Navbar.Content>
           <Navbar.Content hideIn={'md'}>
-            <Flex align={'center'} css={{ gap: '$4' }}>
-              <FeedbackIcon />
-              <Text span>Feedback?</Text>
-            </Flex>
-          </Navbar.Content>
-
-          <Navbar.Content>
             <NotificationsDropdown />
           </Navbar.Content>
 
-          <Navbar.Content hideIn={'md'}>
-            <SupportIcon />
-          </Navbar.Content>
-          <Navbar.Content>
-            <Link href='https://github.com/' target={'_blank'}>
-              <GithubIcon />
-            </Link>
-          </Navbar.Content>
           <Navbar.Content>
             <UserDropdown />
           </Navbar.Content>

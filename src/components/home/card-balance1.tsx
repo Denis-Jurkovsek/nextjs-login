@@ -9,26 +9,28 @@ export const CardBalance1 = () => {
     <Card
       css={{
         width: '375px',
-        bg: 'transparent',
+        bg: '',
+        ml: '45px',
         borderRadius: '$xl',
-        px: '$6'
+        px: '$6',
+        '@xsMax': {
+          bg: 'transparent',
+          ml: '0px'
+        }
       }}
     >
       <Card.Body css={{ py: '$10' }}>
         <Flex css={{ gap: '$5' }}>
-          <BsArrowDownCircleFill size={20} color={'grey'} />
+          <BsArrowDownCircleFill size={20} color={''} />
           <Flex direction={'column'}>
-            <Text span css={{ color: '$green600' }}>
+            <Text span css={{ color: '' }} weight={'bold'}>
               Eintritt
             </Text>
           </Flex>
         </Flex>
-        <Flex css={{ gap: '$6', py: '$4' }} align={'center'}>
-          <Text span size={'$xl'} css={{ color: 'white' }} weight={'semibold'}>
+        <Flex css={{ gap: '$5', py: '$4', pl: '28px' }} align={'center'}>
+          <Text span size={'$xl'} css={{ color: '' }} weight={'semibold'}>
             6312
-          </Text>
-          <Text span css={{ color: '$green600' }} size={'$xs'}>
-            + 2.1%
           </Text>
         </Flex>
       </Card.Body>

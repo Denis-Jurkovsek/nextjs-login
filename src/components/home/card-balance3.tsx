@@ -9,29 +9,31 @@ export const CardBalance3 = () => {
     <Card
       css={{
         width: '375px',
-        bg: 'transparent',
+        bg: '',
+        ml: '45px',
         borderRadius: '$xl',
-        px: '$6'
+        px: '$6',
+        '@xsMax': {
+          bg: 'transparent',
+          ml: '0px'
+        }
       }}
     >
       <Card.Body css={{ py: '$10' }}>
         <Flex css={{ gap: '$5' }}>
-          <BsPeopleFill size={20} color={'gray'} />
+          <BsPeopleFill size={20} color={''} />
           <Flex direction={'column'}>
-            <Text span css={{ color: '$warning' }}>
+            <Text span css={{ color: '' }} weight={'bold'}>
               Doppelverwendungen
             </Text>
           </Flex>
         </Flex>
-        <Flex css={{ gap: '$6', py: '$4' }} align={'center'}>
+        <Flex css={{ gap: '$6', py: '$4', pl: '28px' }} align={'center'}>
           <Button size={'sm'} color={'success'}>
             <Text size={'$xs'} weight={'bold'}>
               6 Prüfen
             </Text>
           </Button>
-          <Text span css={{ color: '$green600' }} size={'$xs'}>
-            + 4.5%
-          </Text>
         </Flex>
       </Card.Body>
     </Card>
