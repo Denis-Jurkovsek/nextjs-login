@@ -1,11 +1,11 @@
 import { createContext, useContext } from 'react'
 
-interface SidebarContext {
+interface ISidebarContextProps {
   collapsed: boolean
   setCollapsed: () => void
 }
 
-export const SidebarContext = createContext<SidebarContext>({
+export const SidebarContext = createContext<ISidebarContextProps>({
   collapsed: false,
   setCollapsed: () => {}
 })

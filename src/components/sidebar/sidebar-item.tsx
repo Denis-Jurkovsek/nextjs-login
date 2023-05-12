@@ -5,15 +5,15 @@ import React from 'react'
 import { useSidebarContext } from '../layout/layout-context'
 import { Flex } from '../styles/flex'
 
-interface Props {
+interface ISidebarItemProps {
   title: string
   icon: React.ReactNode
   isActive?: boolean
   href?: string
 }
 
-export const SidebarItem = ({ icon, title, isActive, href = '' }: Props) => {
-  const { collapsed, setCollapsed } = useSidebarContext()
+export const SidebarItem = ({ icon, title, isActive, href = '' }: ISidebarItemProps) => {
+  const { setCollapsed } = useSidebarContext()
 
   const handleClick = () => {
     if (window.innerWidth < 768) {

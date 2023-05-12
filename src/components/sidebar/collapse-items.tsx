@@ -4,13 +4,13 @@ import React, { useState } from 'react'
 import { ChevronUpIcon } from '../icons/sidebar/chevron-up-icon'
 import { Flex } from '../styles/flex'
 
-interface Props {
+interface ICollapseItemsProps {
   icon: React.ReactNode
   title: string
   items: string[]
 }
 
-export const CollapseItems = ({ icon, items, title }: Props) => {
+export const CollapseItems = ({ icon, items, title }: ICollapseItemsProps) => {
   const [open, setOpen] = useState(false)
 
   const handleToggle = () => setOpen(!open)

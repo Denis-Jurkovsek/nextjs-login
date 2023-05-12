@@ -29,6 +29,7 @@ export const useLockedBody = (initialLocked = false): ReturnType => {
       document.body.style.paddingRight = `${scrollBarWidth}px`
     }
 
+    // eslint-disable-next-line consistent-return
     return () => {
       document.body.style.overflow = originalOverflow
 

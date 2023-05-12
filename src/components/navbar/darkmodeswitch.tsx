@@ -4,6 +4,6 @@ import React from 'react'
 
 export const DarkModeSwitch = () => {
   const { setTheme } = useNextTheme()
-  const { isDark, type } = useTheme()
+  const { isDark } = useTheme()
   return <Switch checked={isDark} onChange={e => setTheme(e.target.checked ? 'dark' : 'light')} />
 }

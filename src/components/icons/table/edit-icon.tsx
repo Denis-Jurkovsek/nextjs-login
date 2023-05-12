@@ -1,11 +1,11 @@
-interface Props {
+interface IEditIconProps {
   size?: number
   fill?: string
   width?: number
   height?: number
 }
 
-export const EditIcon = ({ fill, size, height, width, ...props }: Props) => {
+export const EditIcon = ({ fill, size, height, width, ...props }: IEditIconProps) => {
   return (
     <svg
       width={size || width || 24}

@@ -3,11 +3,11 @@ import React from 'react'
 
 import { Svg } from '../../styles/svg'
 
-interface Props extends React.SVGAttributes<SVGElement> {
+interface IChevronUpIconProps extends React.SVGAttributes<SVGElement> {
   css?: CSS
 }
 
-export const ChevronUpIcon = ({ css, ...props }: Props) => {
+export const ChevronUpIcon = ({ css, ...props }: IChevronUpIconProps) => {
   return (
     <Svg
       xmlns='http://www.w3.org/2000/svg'

@@ -3,12 +3,12 @@ import React from 'react'
 
 import { Flex } from '../styles/flex'
 
-interface Props {
+interface ISidebarMenuProps {
   title: string
   children?: React.ReactNode
 }
 
-export const SidebarMenu = ({ title, children }: Props) => {
+export const SidebarMenu = ({ title, children }: ISidebarMenuProps) => {
   return (
     <Flex css={{ gap: '$4' }} direction={'column'}>
       <Text

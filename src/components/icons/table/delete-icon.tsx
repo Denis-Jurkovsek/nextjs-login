@@ -1,10 +1,10 @@
-interface Props {
+interface IDeleteIconProps {
   size?: number
   fill?: string
   width?: number
   height?: number
 }
-export const DeleteIcon = ({ fill, size, height, width, ...props }: Props) => {
+export const DeleteIcon = ({ fill, size, height, width, ...props }: IDeleteIconProps) => {
   return (
     <svg
       width={size || width || 24}

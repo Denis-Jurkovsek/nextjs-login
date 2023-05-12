@@ -6,13 +6,13 @@ import { SidebarWrapper } from '../sidebar/sidebar'
 import { WrapperLayout } from './layout.styles'
 import { SidebarContext } from './layout-context'
 
-interface Props {
+interface ILayoutProps {
   children: React.ReactNode
 }
 
-export const Layout = ({ children }: Props) => {
+export const Layout = ({ children }: ILayoutProps) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
-  const [_, setLocked] = useLockedBody(false)
+  const [, setLocked] = useLockedBody(false)
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen)
     setLocked(!sidebarOpen)

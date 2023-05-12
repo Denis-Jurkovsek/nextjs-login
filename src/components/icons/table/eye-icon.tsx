@@ -1,11 +1,11 @@
-interface Props {
+interface IEyeIconProps {
   size?: number
   fill?: string
   width?: number
   height?: number
 }
 
-export const EyeIcon = ({ fill, size, height, width, ...props }: Props) => {
+export const EyeIcon = ({ fill, size, height, width, ...props }: IEyeIconProps) => {
   return (
     <svg
       width={size || width || 24}

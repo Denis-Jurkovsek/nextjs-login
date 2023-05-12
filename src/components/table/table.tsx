@@ -41,7 +41,7 @@ export const TableWrapper = () => {
             <Table.Row>{columnKey => <Table.Cell>{RenderCell({ user: item, columnKey })}</Table.Cell>}</Table.Row>
           )}
         </Table.Body>
-        <Table.Pagination shadow noMargin align='center' rowsPerPage={8} onPageChange={page => console.log({ page })} />
+        <Table.Pagination shadow noMargin align='center' rowsPerPage={8} />
       </Table>
     </Box>
   )

@@ -17,7 +17,7 @@ export const UserDropdown = () => {
           />
         </Dropdown.Trigger>
       </Navbar.Item>
-      <Dropdown.Menu aria-label='User menu actions' onAction={actionKey => console.log({ actionKey })}>
+      <Dropdown.Menu aria-label='User menu actions'>
         <Dropdown.Item key='profile' css={{ height: '$18' }}>
           <Text b color='inherit' css={{ d: 'flex' }}>
             Signed in as

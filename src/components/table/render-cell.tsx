@@ -7,12 +7,12 @@ import { EyeIcon } from '../icons/table/eye-icon'
 import type { users } from './data'
 import { IconButton, StyledBadge } from './table.styled'
 
-interface Props {
+interface IRenderCellProps {
   user: (typeof users)[number]
   columnKey: string | React.Key
 }
 
-export const RenderCell = ({ user, columnKey }: Props) => {
+export const RenderCell = ({ user, columnKey }: IRenderCellProps) => {
   // @ts-ignore
   const cellValue = user[columnKey]
   switch (columnKey) {
@@ -48,20 +48,20 @@ export const RenderCell = ({ user, columnKey }: Props) => {
         <Row justify='center' align='center' css={{ gap: '$8', '@md': { gap: 0 } }}>
           <Col css={{ d: 'flex' }}>
             <Tooltip content='Details'>
-              <IconButton onClick={() => console.log('View user', user.id)}>
+              <IconButton>
                 <EyeIcon size={20} fill='#979797' />
               </IconButton>
             </Tooltip>
           </Col>
           <Col css={{ d: 'flex' }}>
             <Tooltip content='Edit user'>
-              <IconButton onClick={() => console.log('Edit user', user.id)}>
+              <IconButton>
                 <EditIcon size={20} fill='#979797' />
               </IconButton>
             </Tooltip>
           </Col>
           <Col css={{ d: 'flex' }}>
-            <Tooltip content='Delete user' color='error' onClick={() => console.log('Delete user', user.id)}>
+            <Tooltip content='Delete user' color='error'>
               <IconButton>
                 <DeleteIcon size={20} fill='#FF0080' />
               </IconButton>

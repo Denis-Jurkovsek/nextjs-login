@@ -1,13 +1,13 @@
 import React from 'react'
 
-interface Props {
+interface ISearchIconProps {
   size?: number
   fill?: string
   width?: number
   height?: number
 }
 
-export const SearchIcon = ({ size, fill, width = 24, height = 24, ...props }: Props) => {
+export const SearchIcon = ({ size, fill, width = 24, height = 24, ...props }: ISearchIconProps) => {
   return (
     <svg fill='none' height={size || height} viewBox='0 0 24 24' width={size || width} {...props}>
       <path
