@@ -125,6 +125,7 @@ export const Steam = () => {
             <CardBalance2 />
             <CardBalance3 />
           </Flex>
+
           <Chart options={options} series={state} type='area' height={425} />
         </div>
       </Box>
